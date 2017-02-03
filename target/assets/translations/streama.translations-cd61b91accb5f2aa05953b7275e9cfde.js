@@ -1,0 +1,1 @@
+angular.module("streama.translations",["pascalprecht.translate"]).config(["$translateProvider",function(a){a.determinePreferredLanguage();a.fallbackLanguage("en")}]).run(["$rootScope",function(a){a.availableLanguages=["en","es","de","kr"]}]);

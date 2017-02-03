@@ -1,0 +1,1 @@
+angular.module("streamaApp").run(["$templateCache",function(a){a.put("cate.htm",'<div class="profile"> <div class="profile-inner" ng-class="{\'password-active\': changePasswordIsActive}"> test </div> </div>')}]);

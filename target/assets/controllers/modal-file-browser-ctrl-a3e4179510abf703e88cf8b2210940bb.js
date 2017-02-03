@@ -1,0 +1,1 @@
+streamaApp.controller("modalFileBrowserCtrl",["$scope","$uibModalInstance","apiService",function(a,b,c){a.loading=!0;c.video.listAllFiles().success(function(d){a.loading=!1;a.files=d}).error(function(){alertify.error("Failed to load the list of files.")});a.chooseFile=function(a){b.close(a)};a.cancel=function(){b.dismiss("cancel")}}]);

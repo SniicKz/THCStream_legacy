@@ -1,0 +1,1 @@
+streamaApp.controller("settingsCtrl",["$scope","apiService","modalService","$rootScope",function(a,b,c,d){}]);

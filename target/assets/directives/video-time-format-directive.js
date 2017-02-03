@@ -1,0 +1,1 @@
+streamaApp.directive("videoTimeFormat",function(){return{restrict:"A",require:"ngModel",link:function(c,d,e,b){b.$parsers.push(function(a){return 60*a.split(":")[0]+1*a.split(":")[1]});b.$formatters.push(function(a){if(void 0==a)return"";var b=a%60;return(a-b)/60+":"+b})}}});

@@ -1,0 +1,1 @@
+streamaApp.factory("userService",["$rootScope","$translate",function(a,b){return{setCurrentUser:function(c){a.currentUser=c;b.use(a.currentUser.language||"en")}}}]);
