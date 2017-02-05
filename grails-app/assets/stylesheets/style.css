@@ -1150,25 +1150,25 @@ hr {
       font-weight: 100; }
 
 #login {
-  margin: 15px 0px;
-  padding: 0px;
+  margin: 0px 15px;
+  padding:62px 0px;
   text-align: center; }
 
 #login .inner {
-  max-width: 540px;
+  max-width: 480px;
   width: 100%;
-  padding-bottom: 6px;
-  margin: 60px auto;
+  margin: 0px auto;
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.11); }
+  background-color:rgb(32, 35, 37);
+  border: 1px solid rgb(57, 59, 61)}
   #login .inner .fheader {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
-    padding: 10px 20px;
-    color: #B0DDEF;
-    font-size: 18px; }
+    border-bottom: 1px solid rgba(195, 195, 195, 0.11);
+    padding: 0px 0px 10px 0px;
+    color: #dcdcdc;
+    margin:13px 19px 0px 19px;
+    font-size: 17px; }
   #login .inner .cssform {
-    padding: 16px; }
+    padding: 10px 21px; }
     #login .inner .cssform:after {
       content: "";
       display: table;
@@ -5253,7 +5253,7 @@ body.mdx-active #mdx-control-view {
       padding: 6px; }
 
   .dash-filter {
-    display: none; }
+    display: block; }
 
   .admin {
     position: static; }
