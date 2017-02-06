@@ -126,10 +126,8 @@ label {
     background-color: rgba(255, 255, 255, 0.12);
     opacity: 0.5; }
 
-[ui-sref],
-[ng-click],
-[uib-dropdown-toggle] {
-  cursor: pointer; }
+[ng-click] {
+  cursor: default; }
 
 .typeahead-wrapper {
   position: relative; }
@@ -627,7 +625,7 @@ header.main {
 
 .dash-search {
   margin: 0;
-  padding: 8px 9px 8px 0px; }
+  padding: 8px; }
 
 .dropdown-menu > li > a.typeahead-item {
   display: -webkit-box;
@@ -1012,8 +1010,16 @@ hr {
   padding:5px 0px;
 }
 #sidebar_ {
-  float: left;margin: 15px 9px;padding: 2px 15px 15px 15px;background: #202325;border-radius: 4px;min-width: 198px;border: 1px solid #393b3d;
+  float: left;
+  margin: 15px 9px;
+  padding: 2px 15px 15px 15px;
+  background: #202325;
+  border-radius: 4px;
+  min-width: 198px;
+  border: 1px solid #393b3d;
 }
+
+
 
 .dashboard {
   padding: 15px;
@@ -1149,14 +1155,35 @@ hr {
       font-size: 22px;
       font-weight: 100; }
 
+
+
+#login_info {
+  margin: 0px 15px;
+  padding:8px 0px 8px 0px;
+  text-align: center;
+}
+
+#login_info .inner {
+  max-width: 480px;
+  width: 100%;
+  border-radius:4px;
+  margin: 0px auto;
+  text-align: left;
+  padding:10px 15px;
+  background-color:rgb(32, 35, 37);
+  border: 1px solid rgb(57, 59, 61)}
+
+
 #login {
   margin: 0px 15px;
-  padding:62px 0px;
+  padding:62px 0px 7px 0px;
   text-align: center; }
+
 
 #login .inner {
   max-width: 480px;
   width: 100%;
+  border-radius:4px;
   margin: 0px auto;
   text-align: left;
   background-color:rgb(32, 35, 37);
@@ -1476,7 +1503,7 @@ streama-video-player.nocursor {
     margin: 0; }
   .player-wrapper .video-info h1 {
     margin: 0;
-    margin-bottom: 10px; }
+    margin:10px 0px; }
   .player-wrapper .video-info h3 {
     margin: 0;
     font-size: 20px;
@@ -1488,7 +1515,7 @@ streama-video-player.nocursor {
   left: 50%;
   width: auto; }
   .player-wrapper .spinner > div {
-    background: #B0DDEF;
+    background: white;
     width: 20px;
     height: 20px;
     margin-right: 12px; }
@@ -1710,7 +1737,7 @@ streama-video-player.nocursor {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  border-radius: 12px;
+  border-radius: 4px;
   background: #262626;
   box-shadow: 0 .2em .1em 0 #000; }
   .player-ui-slider .ui-slider-range {
@@ -1722,7 +1749,7 @@ streama-video-player.nocursor {
     top: 0;
     height: 100%;
     background: radial-gradient(#ffffff, #cacaca);
-    border-radius: 8px 0 0 8px; }
+    border-radius: 4px 0 0 4px; }
   .player-ui-slider .ui-slider-handle {
     position: absolute;
     cursor: pointer;
@@ -1736,9 +1763,9 @@ streama-video-player.nocursor {
     background: radial-gradient(#ffffff 33%, #c5c5c5);
     box-shadow: 0 0 6px black; }
   .player-ui-slider.volume-scrubber {
-    height: 106px;
+    height: 107px;
     width: 13px;
-    margin: 0 7px;
+    margin: 0 10px;
     background-color: #585858;
     box-shadow: none; }
     .player-ui-slider.volume-scrubber .ui-slider-handle {

@@ -1,10 +1,13 @@
 <html>
 <head>
 	<meta name='layout' content='noAngular'/>
-	<title>THCStream</title>
+	<title>THCStream - Login</title>
 </head>
 
 <body>
+
+
+
 <div id='login' ng-app="streama.translations">
 	<div class='inner'>
 		<div class='fheader'>{{'LOGIN.TITLE' | translate}}</div>
@@ -38,6 +41,16 @@
 		</form>
 	</div>
 </div>
+
+<div id='login_info' ng-app="streama.translations">
+	<div class='inner'>
+		Die Verfügbarkeit von HD- und Ultra-HD-Bildqualität ist abhängig von Ihrem Internetdienst und Gerät.<br>
+		Nicht alle Inhalte stehen in HD oder Ultra-HD zur Verfügung. 
+	</div>
+</div>
+
+
+
 <script type='text/javascript'>
 	<!--
 	(function() {
