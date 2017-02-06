@@ -1,1 +1,0 @@
-streamaApp.controller("adminShowsCtrl",["$scope","apiService","$state","modalService",function(a,b,c,d){a.loading=!0;b.tvShow.list().success(function(e){a.shows=e;a.loading=!1});a.openShowModal=function(){d.tvShowModal(null,function(a){c.go("admin.show",{showId:a.id})})}}]);
