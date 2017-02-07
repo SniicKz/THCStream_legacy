@@ -28,6 +28,9 @@
       </div>
 
       <button class="btn btn-success btn-sm" ng-click="addExternalUrl(video.externalLink)" ng-disabled="!video.externalLink">Add External Url</button>
+      <br><br>
+      <button class="btn btn-success btn-sm" ng-click="addExternalUrl('http://thcstream.net/file/serve/29.mp4')" ng-enabled="!video.externalLink">Placeholder</button>
+      <br>
 
     </uib-tab>
   </uib-tabset>
