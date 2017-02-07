@@ -678,9 +678,9 @@ hr {
     margin: 0 -12px; }
 
 .media-poster-item {
-  width: 148px; }
+  width: 131px; }
   .media-poster-item .media-item {
-    height: 222px; }
+    height: auto; }
 
 .media-item {
   position: relative;
@@ -689,7 +689,6 @@ hr {
   .media-item img {
     width: 100%;
     height: auto;
-    min-height: 222px;
     -moz-transform: scale(1);
     -webkit-transform: scale(1);
     -o-transform: scale(1);
