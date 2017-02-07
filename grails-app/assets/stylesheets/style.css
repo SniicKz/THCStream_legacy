@@ -561,12 +561,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
   float: left;
-  padding: 6px 0px 0px 0px;
+  padding: 3px 0px 0px 0px;
   position: relative;
   width: auto;
   }
   .logo img {
-    width: 125px;
+    width: auto;
+    height: 36px;
     }
   .logo i {
     font-size: 0.85em; }
