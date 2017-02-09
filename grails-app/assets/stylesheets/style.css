@@ -1218,9 +1218,9 @@ hr {
   border:1px solid #393b3d;
   top: 70px;
   background: #202325;
-  bottom: 30px;
-  left: 0;
-  right: 0; 
+  bottom: 15px;
+  left: 17px;
+  right: 17px; 
   max-width:1000px;
   margin:0 auto;
 overflow: hidden;
@@ -5240,12 +5240,13 @@ body.mdx-active #mdx-control-view {
 .genre-tag {
   float: left;
   list-style: none;
-  padding: 0px;
+  padding: 0px 7px;
+
   margin-right: 8px;
   color:gray;
   margin-bottom: 8px; }
   .genre-tag.active {
-    background: #2898c5; }
+    background: #313131; }
   .genre-tag.interactive:hover {
     background: none;
     color: white; }
@@ -5283,7 +5284,8 @@ body.mdx-active #mdx-control-view {
     display: block; }
 
   .admin {
-    position: static; }
+    position: static; 
+    margin:3px 7px 7px 7px}
     .admin .nav {
       width: 110px; }
       .admin .nav ul li {
