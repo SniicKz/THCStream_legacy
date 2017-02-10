@@ -18,7 +18,7 @@ class File {
 
   static constraints = {
     sha256Hex maxSize: 64
-    quality inList: ['720p', '480p', '360p']
+    quality inList: ['1080' ,'720p', '480p', '360p']
   }
   static transients = ['uploadService']
 

@@ -66,7 +66,7 @@ grails.gorm.default.constraints = {
 }
 
 
-grails.mail.default.from = "Streama <info@streama.com>"
+grails.mail.default.from = "THCStream <sniickz@thcstream.net>"
 
 
 grails.converters.encoding = "UTF-8"
