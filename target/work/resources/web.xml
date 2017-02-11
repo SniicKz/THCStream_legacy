@@ -157,16 +157,16 @@
         <url-pattern>*.gsp</url-pattern>
     </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>grails</servlet-name>
-    <url-pattern>/stomp/*</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
     <servlet-name>grails-errorhandler</servlet-name>
     <url-pattern>/grails-errorhandler</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>grails</servlet-name>
     <url-pattern>*.dispatch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>grails</servlet-name>
+    <url-pattern>/stomp/*</url-pattern>
   </servlet-mapping>
 
     <session-config>
