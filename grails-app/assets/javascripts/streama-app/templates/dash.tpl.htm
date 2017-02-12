@@ -19,7 +19,7 @@
 
 
 
-
+<!-- https://image.tmdb.org/t/p/w1280/{{newRelease.media.backdrop_path}} -->
 
 <div class="dashboard">
   <div ng-if="newReleases.length && !selectedGenre">
@@ -28,7 +28,11 @@
 
     <div uis-owl-carousel class="new-releases-slider" >
       <div ng-repeat="newRelease in newReleases" class="new-releases-slide">
-        <a ui-sref="player({videoId: newRelease.videoToPlayId})"><img class="poster-image" ng-src="https://image.tmdb.org/t/p/w342/{{newRelease.media.poster_path}}" class="pull-left"></a>
+        <a ui-sref="player({videoId: newRelease.videoToPlayId})">
+          <img class="poster-image" ng-src="https://image.tmdb.org/t/p/w342/{{newRelease.media.poster_path}}" class="pull-left">
+        </a>
+
+        <!-- Notification --> 
         <div class="image-background" style="background-image: url('https://image.tmdb.org/t/p/w1280/{{newRelease.media.backdrop_path}}')">
 
           <i class="info-icon ion-ios-information" ng-click="showDetails(newRelease.media)"></i>
@@ -57,18 +61,27 @@
 
     <div class="media-list media-list-continue-watching">
       <div class="media-list-item media-poster-item" ng-repeat="viewingStatus in continueWatching">
-        <div class="media-item" >
+        <div class="media-item">
 
           <img ng-if="viewingStatus.video.poster_image_src" ng-src="{{::viewingStatus.video.poster_image_src}}"/>
+
+
+
           <img ng-if="!viewingStatus.video.poster_image_src && viewingStatus.video.poster_path"
                ng-src="https://image.tmdb.org/t/p/w300/{{::viewingStatus.video.poster_path}}"/>
+
+
+
+
           <img ng-if="!viewingStatus.video.poster_path && !viewingStatus.video.poster_image_src"
                ng-src="{{basePath}}assets/poster-not-found.png"/>
 
           <div class="play-text">
-            <h4>Continue "<span ng-bind="::(viewingStatus.video.title || viewingStatus.video.show.name)"></span>"</h4>
-            <button class=" btn btn-secondary btn-xss complete-watching" ng-click="markCompleted(viewingStatus)">
-              {{'DASHBOARD.MARK_COMPLETED' | translate}}</button>
+            <h4><span ng-bind="::(viewingStatus.video.title || viewingStatus.video.show.name)"></span></h4>
+            <!--<button class=" btn btn-secondary btn-xss complete-watching" ng-click="markCompleted(viewingStatus)">
+              {{'DASHBOARD.MARK_COMPLETED' | translate}}</button>-->
+<button class=" btn btn-secondary btn-xss complete-watching" ng-click="markCompleted(viewingStatus)">&#10004;</button>
+
             <p ng-show="viewingStatus.video.isEpisode"><span ng-bind="::viewingStatus.video.episodeString"></span></p>
           </div>
 
@@ -128,7 +141,14 @@
     <div class="media-list">
       <div class="media-list-item media-poster-item" ng-repeat="tvShow in tvShows | orderBy:showSort.sort |filter: dashFilter.showFilter">
         <div class="media-item" >
+
+
+
+
           <img ng-if="tvShow.poster_path" ng-src="https://image.tmdb.org/t/p/w300/{{::tvShow.poster_path}}"/>
+
+
+
           <img ng-if="!tvShow.poster_path && !tvShow.manualInput" ng-src="{{basePath}}assets/poster-not-found.png"/>
 
           <img ng-show="tvShow.manualInput && tvShow.poster_image_src" ng-src="{{::tvShow.poster_image_src}}">
@@ -199,7 +219,6 @@
     </div>
 
     <p class="no-episodes-yet" ng-show="!movies.length">
-
       {{'DASHBOARD.NO_MOVIES_FOUND' | translate}}
     </p>
 
@@ -208,7 +227,13 @@
         <div class="media-item" >
 
           <img ng-if="!movie.poster_path && !movie.poster_image_src" ng-src="{{basePath}}assets/poster-not-found.png"/>
+
           <img ng-if="movie.poster_path" ng-src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
+
+          <!--<img ng-if="movie.poster_path" ng-src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}"/>-->
+
+
+
           <img ng-if="movie.poster_image_src" ng-src="{{movie.poster_image_src}}"/>
 
           <div class="play-text">
