@@ -1128,6 +1128,7 @@ hr {
       background: rgba(0, 0, 0, 0.74);
       padding: 23px 34px;
       height: 100%;
+      width: 100%;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -1864,12 +1865,11 @@ streama-video-player.nocursor {
       #player-menu-episode-selector .season-list .episode-play i {
         margin: 3px;
         display: block;
-        border: 1px solid white;
         padding: 5px 11px;
         border-radius: 2em; }
         #player-menu-episode-selector .episode-list .episode-play i:hover,
         #player-menu-episode-selector .season-list .episode-play i:hover {
-          background: #175670; }
+          background: gray; }
     #player-menu-episode-selector .episode-list .extra-episode-info:after,
     #player-menu-episode-selector .season-list .extra-episode-info:after {
       content: "";
@@ -1878,8 +1878,10 @@ streama-video-player.nocursor {
     #player-menu-episode-selector .episode-list .extra-episode-info .image-wrapper,
     #player-menu-episode-selector .season-list .extra-episode-info .image-wrapper {
       float: left;
-      margin: 5px 10px 5px 0;
-      width: 94px; }
+      margin: 2px 10px 5px 0;
+      width: 92px;
+      overflow: hidden;
+      border-radius: 2px; }
       #player-menu-episode-selector .episode-list .extra-episode-info .image-wrapper .fallback-image,
       #player-menu-episode-selector .season-list .extra-episode-info .image-wrapper .fallback-image {
         height: 58px; }
