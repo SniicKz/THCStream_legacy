@@ -42,6 +42,7 @@
 </div>
 
 
+
 <div id='login_info' ng-app="streama.translations">
 	<div class='inner'>
 		Du kannst THCStream auch ohne eine Mitgliedschaft benutzen.<br>
@@ -54,6 +55,8 @@
 		</form>
 	</div>
 </div>
+
+
 
 <div id='login_info' ng-app="streama.translations">
 	<div class='inner'>
