@@ -129,7 +129,7 @@
  			</sec:ifAnyGranted>
 		</ul>
 	</div>
-
+ 
 	<i class="ion-navicon navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></i>
 </header>
 

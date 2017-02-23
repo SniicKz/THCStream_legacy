@@ -23,7 +23,7 @@
 					<input type="text" name="j_username" class="form-control" placeholder="{{'LOGIN.USERNAME' | translate}}">
 				</div>
 			</div>
-
+ 
 			<div class="form-group">
 				<label for="inputPassword" class="col-lg-2 control-label">{{'LOGIN.PASSWORD' | translate}}</label>
 				<div class="col-lg-10">
