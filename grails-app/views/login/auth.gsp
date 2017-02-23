@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta name='layout' content='noAngular'/>
-	<title>THCStream - Login</title>
+	<title>THCStream</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 		<g:if test='${flash.message}'>
 			<div class='login_message'>${flash as grails.converters.JSON}</div>
 		</g:if>
-
+ 
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform form-horizontal' autocomplete='off'>
 
 			<div class="form-group">
