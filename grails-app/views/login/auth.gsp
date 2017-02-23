@@ -48,8 +48,8 @@
 		Du kannst THCStream auch ohne eine Mitgliedschaft benutzen.<br>
 		Klick auf "Jetzt beitreten" und siehe dir unendlich viele filme in Bester Qualität an.
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform form-horizontal' autocomplete='off'>
-			<input style="display:none;" type="text" name="j_username" class="form-control" value="GUEST@GUEST_THCSTREAM.COM">
-			<input type="password" style="display:none;"  name='j_password' class="form-control" value="GUEST@GUEST_THCSTREAM.COM" >
+			<input style="display:none;" type="text" name="j_username" class="form-control" value="guest@guest.com">
+			<input type="password" style="display:none;"  name='j_password' class="form-control" value="guest@guest.com" >
 			<br>
 			<button class="login_guest_button">Jetzt beitreten!</button></span>
 		</form>
@@ -58,12 +58,12 @@
 
 
 
-<div id='login_info' ng-app="streama.translations">
+<!--<div id='login_info' ng-app="streama.translations">
 	<div class='inner'>
 		Die Verfügbarkeit von HD- und Ultra-HD-Bildqualität ist abhängig von Ihrem Internetdienst und Gerät.<br>
 		Nicht alle Inhalte stehen in HD oder Ultra-HD zur Verfügung. 
 	</div>
-</div>
+</div>-->
 
 
 

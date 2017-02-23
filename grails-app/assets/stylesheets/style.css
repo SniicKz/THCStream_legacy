@@ -1161,6 +1161,7 @@ hr {
   border:none;
   background: none;
   color:gray;
+  padding:0px;
   transition: 0.2s;
 }
 .login_guest_button:hover {

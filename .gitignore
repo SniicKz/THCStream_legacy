@@ -49,3 +49,4 @@ Temporary Items
 target/THCStream-0.1.war
 *.war
 target/work/resources/web.xml
+target/work/resources/web.xml
