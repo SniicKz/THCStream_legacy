@@ -107,7 +107,7 @@
         </sec:ifAnyGranted>
       </sec:ifLoggedIn>
 
-      <sec:ifLoggedIn>
+       <sec:ifAnyGranted roles="ROLE_USER">
         <li>
 					<div class="btn-group" uib-dropdown is-open="status.isopen" style="margin: 5px 0;">
 						<button id="single-button" style="top:1px;" type="button" class="btn btn-primary btn-sm"
@@ -123,7 +123,10 @@
 						</ul>
 					</div>
 				</li>
-      </sec:ifLoggedIn>
+         </sec:ifAnyGranted>
+			<sec:ifAnyGranted roles="ROLE_GUEST">
+         		<li><g:link uri="/j_spring_security_logout">Anmelden</g:link></li>
+ 			</sec:ifAnyGranted>
 		</ul>
 	</div>
 

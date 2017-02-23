@@ -27,6 +27,10 @@ class MarshallerService {
       returnArray['language'] = user.language
       returnArray['favoriteGenres'] = user.favoriteGenres
       returnArray['isAdmin'] = (user.authorities.find{it.authority == 'ROLE_ADMIN'} ? true : false)
+
+      returnArray['isUser'] = (user.authorities.find{it.authority == 'ROLE_USER'} ? true : false)
+      returnArray['isGuest'] = (user.authorities.find{it.authority == 'ROLE_GUEST'} ? true : false)
+
       returnArray['isContentManager'] = (user.authorities.find{it.authority == 'ROLE_CONTENT_MANAGER'} ? true : false)
       returnArray['pauseVideoOnClick'] = user.pauseVideoOnClick
 

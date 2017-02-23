@@ -1025,6 +1025,7 @@ hr {
   .dashboard h3 {
     font-size: 16px; 
     font-weight: bold;
+    margin-top:0px;
     margin-bottom:16px;}
   .dashboard .genre-display {
     font-size:16px; }
@@ -1155,6 +1156,16 @@ hr {
       font-weight: 100; }
 
 
+
+.login_guest_button {
+  border:none;
+  background: none;
+  color:gray;
+  transition: 0.2s;
+}
+.login_guest_button:hover {
+  color:white;
+}
 
 #login_info {
   margin: 0px 15px;

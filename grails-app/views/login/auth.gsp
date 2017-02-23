@@ -7,7 +7,6 @@
 <body>
 
 
-
 <div id='login' ng-app="streama.translations">
 	<div class='inner'>
 		<div class='fheader'>{{'LOGIN.TITLE' | translate}}</div>
@@ -38,6 +37,20 @@
 			<input style="display: none;" type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' checked='checked'/>
 
 			<button class="btn btn-primary pull-right">{{'LOGIN.SUBMIT' | translate}}</button></span>
+		</form>
+	</div>
+</div>
+
+
+<div id='login_info' ng-app="streama.translations">
+	<div class='inner'>
+		Du kannst THCStream auch ohne eine Mitgliedschaft benutzen.<br>
+		Klick auf "Jetzt beitreten" und siehe dir unendlich viele filme in Bester Qualität an.
+		<form action='${postUrl}' method='POST' id='loginForm' class='cssform form-horizontal' autocomplete='off'>
+			<input style="display:none;" type="text" name="j_username" class="form-control" value="GUEST@GUEST_THCSTREAM.COM">
+			<input type="password" style="display:none;"  name='j_password' class="form-control" value="GUEST@GUEST_THCSTREAM.COM" >
+			<br>
+			<button class="login_guest_button">Jetzt beitreten!</button></span>
 		</form>
 	</div>
 </div>
