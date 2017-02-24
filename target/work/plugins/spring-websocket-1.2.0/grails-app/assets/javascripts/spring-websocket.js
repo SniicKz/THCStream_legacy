@@ -1,2 +1,0 @@
-//=require sockjs
-//=require stomp
