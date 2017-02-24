@@ -21,21 +21,26 @@
 
       <div class="row">
         <div class="col-md-11">
+        <span class="label label-danger" ng-click="manageFiles(movie)" ng-show="!movie.hasFiles"><i class="ion-alert-circled"></i>Noch kein video hochgeladen!</span>
           <h1>
             {{movie.title}} &nbsp;
             <a ng-show="movie.hasFiles" class="ion-android-arrow-dropright-circle" ui-sref="player({videoId: movie.id})"></a>
           </h1>
-          <span class="label label-danger" ng-click="manageFiles(movie)" ng-show="!movie.hasFiles"><i class="ion-alert-circled"></i> No Video File yet!</span>
         </div>
 
         <div class="col-md-1">
-          <div class="btn-group pull-right">
+          <div class="btn-group pull-right" style="float:left !important; ">
             <span uib-dropdown on-toggle="toggled(open)">
               <i class="ion-ios-settings icon-xl" uib-dropdown-toggle></i>
               <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
                 <li><a ng-click="openMovieModal()">Edit info</a></li>
                 <li><a ng-click="manageFiles(movie)">Manage Files</a></li>
-                <li><a ng-click="deleteMovie(movie)">Delete Movie</a></li>
+                
+
+  
+                  <li><a ng-click="deleteMovie(movie)" ng-if="currentUser.isAdmin">Delete Movie</a></li>
+   
+
                 <li><a ng-click="addToCurrentNotification()">Add to Email-Notification</a></li>
                 <li><a ng-click="highlightOnDashboard()">Highlight on Dashboard</a></li>
               </ul>
@@ -47,7 +52,7 @@
       <hr/>
 
 
-      <div class="row">
+      <!--<div class="row">
         <div class="col-sm-2">
           <label>Release Date</label>
           <p class="data-display">{{movie.release_date}}</p>
@@ -66,20 +71,20 @@
           <label>Rating Count</label>
           <p class="data-display">{{movie.vote_count}}</p>
         </div>
-      </div>
+      </div>-->
 
       <br/>
 
-      <div class="row">
+      <div class="row" style="margin-bottom:10px;">
         <div class="col-sm-12">
-          <label>Overview</label>
+          <label>Beschreibung</label>
           <p class="data-display">{{movie.overview}}</p>
         </div>
 
-        <div class="col-sm-2" ng-if="movie.trailerKey">
+        <!--<div class="col-sm-2" ng-if="movie.trailerKey">
           <label>Trailer</label>
           <iframe width="560" height="315" ng-src="{{'https://www.youtube.com/embed/'+movie.trailerKey+'?rel=0' | trustResourceUrl}}" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </div>-->
 
         <div class="col-sm-12">
           <label>Genre</label>
@@ -90,20 +95,20 @@
           </ul>
           <p ng-show="!movie.genre.length" class="data-display fade-50">No genre added yet</p>
         </div>
-        <div class="col-sm-12" ng-if="movie.trailer">
+        <!--<div class="col-sm-12" ng-if="movie.trailer">
           <label>Trailer</label>
           <br>
           <iframe width="560" height="315" ng-src="{{'https://www.youtube.com/embed/'+movie.trailerKey+'?rel=0' | trustResourceUrl}}" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </div>-->
       </div>
 
 
-      <div class="row" ng-show="!movie.hasFiles">
+      <!--<div class="row" ng-show="!movie.hasFiles">
         <hr/>
         <button class="btn btn-danger btn-block btn-lg" ng-click="manageFiles(movie)">
           <i class="ion-alert-circled"></i> No Video File yet! Drop file or click here to add
         </button>
-      </div>
+      </div>-->
 
     </div>
 
@@ -121,9 +126,8 @@
 <br/>
 <hr/>
 
-<div ng-show="movie.similarMovies">
+<!--<div ng-show="movie.similarMovies">
   <h3>Similar Movies</h3>
-  <h5>Suggested by TheMovieDb.org</h5>
   <div class="media-list similar-media">
     <div class="media-list-item" ng-repeat="movie in movie.similarMovies.results">
       <div class="hover-overlay">
@@ -138,5 +142,5 @@
       <div class="media-meta">Release: {{movie.release_date.substring(0, 4)}} | <i class="ion-ios-star"></i> {{movie.vote_average}}</div>
     </div>
   </div>
-
 </div>
+-->

@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 	<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
 	<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
-
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<asset:stylesheet src="vendor.css"/>
 	<asset:stylesheet src="application.css"/>
 
@@ -17,6 +17,12 @@
 	<asset:javascript src="application.js"/>
 
 	<g:layoutHead/>
+	<!-- Toggle Menu -->
+	<script type="text/javascript">
+		function toggleMenu(){
+	        $("#bs-example-navbar-collapse-1").toggle();
+	    }
+	</script>
 	<!-- PopAds.net Popunder Code for www.thcstream.net -->
 	<script type="text/javascript" data-cfasync="false">
 	/*<![CDATA[/* */
@@ -57,6 +63,13 @@
 				</div>
 			</a>
 		</div>
+
+
+
+
+
+
+
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	<div class="pull-left flex">
 
@@ -129,8 +142,21 @@
  			</sec:ifAnyGranted>
 		</ul>
 	</div>
+
+
+
+
+
+
+
  
-	<i class="ion-navicon navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></i>
+	<!-- <i class="ion-navicon navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></i> -->
+	<i class="ion-navicon navbar-toggle collapsed" onclick="toggleMenu()" id="collapse_menu"></i>
+
+
+
+
+
 </header>
 
 <g:layoutBody/>

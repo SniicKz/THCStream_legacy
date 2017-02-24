@@ -1,0 +1,26 @@
+<plugin name='seofriendly-urls' version='1.0.2' grailsVersion='1.3 &gt; *'>
+  <author>Álvaro Sánchez-Mariscal</author>
+  <authorEmail>alvaro.sanchez@salenda.es</authorEmail>
+  <title> </title>
+  <description>Helps to easily convert any string into a SEO-friendly one, eg from "The Lord of the Rings" to "the-lord-of-the-rings".
+
+Useful if you want SEO-friendly URL's like /book/the-lord-of-the-rings instead of /book/show/123.
+</description>
+  <documentation>http://grails.org/plugin/seo-friendly-urls</documentation>
+  <type>SeofriendlyUrlsGrailsPlugin</type>
+  <resources>
+    <resource>es.salenda.plugins.seo.friendly.urls.FriendlyUrlService</resource>
+  </resources>
+  <repositories>
+    <repository name='http://grails.org/plugins' url='http://grails.org/plugins' />
+    <repository name='grailsCentral' url='http://plugins.grails.org' />
+    <repository name='http://repo.grails.org/grails/plugins' url='http://repo.grails.org/grails/plugins/' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='grailsCore' url='http://svn.codehaus.org/grails/trunk/grails-plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
