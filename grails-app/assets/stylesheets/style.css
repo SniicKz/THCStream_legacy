@@ -550,11 +550,27 @@ a {
   margin-bottom: 20px; }
 
 body {
-  background:#25292B url("/assets/background.png");
-  color: white;
-  font-weight: 300;
-  font-family: Arial;
+    background-image: url("/assets/bg_pc.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #25292B;
+    color: white;
+    font-weight: 300;
+    font-family: Arial;
+}
+
+@media (max-width: 500px) { 
+  body {
+    background-image: url("/assets/bg_mobile.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #25292B;
+    color: white;
+    font-weight: 300;
+    font-family: Arial;
   }
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color: white; }
@@ -597,7 +613,7 @@ header.main {
   width:100%;
   min-height: 49px;
   z-index:9999;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.11); }
+  border-bottom:  1px solid rgb(45, 49, 50); }
   header.main:after {
     content: "";
     display: table;
@@ -5250,8 +5266,7 @@ body.mdx-active #mdx-control-view {
 .genre-tag {
   float: left;
   list-style: none;
-  padding: 0px 7px;
-
+  padding: 0px 10px 3px 0px;
   margin-right: 8px;
   color:gray;
   margin-bottom: 8px; }

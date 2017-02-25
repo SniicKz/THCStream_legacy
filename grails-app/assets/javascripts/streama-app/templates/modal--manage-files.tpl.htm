@@ -1,6 +1,6 @@
 <div class="modal-body">
   <legend>
-    Video and subtitles for "{{video.name || video.title}}"
+    Video für "{{video.name || video.title}}"
   </legend>
 
   <uib-tabset ng-init="tabActive == (video.externalVideoUrl ? true : false)">
@@ -8,9 +8,9 @@
       <button ng-model="file"  class="btn btn-dropzone btn-block btn-lg"
               ngf-drop ngf-drag-over-class="dragover-upload" ngf-change="upload($files)" ngf-select>
 
-        <span ng-show="uploadStatus.percentage == null">Drop File or Click to Choose</span>
+        <span ng-show="uploadStatus.percentage == null">Film hinzufügen</span>
 
-        <span ng-show="uploadStatus.percentage != null && uploadStatus.percentage < 100">Uploading {{uploadStatus.percentage}}%</span>
+        <span ng-show="uploadStatus.percentage != null && uploadStatus.percentage < 100">Lade hoch, bitte warte!<br>{{uploadStatus.percentage}}%</span>
 
         <span ng-show="uploadStatus.percentage == 100">
           <i class="ion-load-c spin icon-xl"></i>
@@ -29,7 +29,6 @@
 
       <button class="btn btn-success btn-sm" ng-click="addExternalUrl(video.externalLink)" ng-disabled="!video.externalLink">Add External Url</button>
       <br><br>
-      <button class="btn btn-success btn-sm" ng-click="addExternalUrl('http://thcstream.net/file/serve/29.mp4')" ng-enabled="!video.externalLink">Placeholder</button>
       <br>
 
     </uib-tab>
@@ -49,7 +48,10 @@
         <td>{{file.originalFilename}}</td>
         <td>{{file.contentType}}</td>
         <td style="padding: 6px;">
-          <button title="Delete file" class="btn btn-xs btn-danger" ng-click="removeFile(file)"><i class="ion-trash-a"></i></button>
+          
+          <button title="Delete file" class="btn btn-xs btn-danger" ng-if="currentUser.isAdmin" ng-click="removeFile(file)"><i class="ion-trash-a"></i></button>
+
+
           <a target="_blank" href="{{file.src}}" class="btn btn-xs btn-primary">preview</a>
         </td>
       </tr>
