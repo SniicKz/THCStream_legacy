@@ -552,14 +552,13 @@ a {
 body {
     background-image: url("/assets/bg_pc.png");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center top;
     background-attachment: fixed;
     background-color: #25292B;
     color: white;
     font-weight: 300;
     font-family: Arial;
 }
-
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -598,13 +597,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header.main {
-  background: rgba(32, 35, 37, 0.96);
+  background: rgb(37, 41, 43);
   padding: 5px 15px;
   position: fixed;
   width:100%;
   min-height: 49px;
   z-index:9999;
-  }
+}
+
+
+
+
+
   header.main:after {
     content: "";
     display: table;
@@ -5328,4 +5332,9 @@ body.mdx-active #mdx-control-view {
     .media-poster-item .media-item {
       height: auto; } }
 
-/*# sourceMappingURL=style.css.map */
+
+.header_MAIN {
+  background:red;
+}
+
+}

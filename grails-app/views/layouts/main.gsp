@@ -18,8 +18,8 @@
 	<asset:javascript src="application.js"/>
 
 	<g:layoutHead/>
-	<!-- Toggle Menu -->
 	<script type="text/javascript">
+
 
 		function toggleMenu(){
 	        $("#bs-example-navbar-collapse-1").toggle();
