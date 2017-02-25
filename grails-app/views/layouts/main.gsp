@@ -9,7 +9,8 @@
 	<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 	<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
 	<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js">
+	</script>
 	<asset:stylesheet src="vendor.css"/>
 	<asset:stylesheet src="application.css"/>
 
@@ -19,9 +20,11 @@
 	<g:layoutHead/>
 	<!-- Toggle Menu -->
 	<script type="text/javascript">
+
 		function toggleMenu(){
 	        $("#bs-example-navbar-collapse-1").toggle();
 	    }
+
 	</script>
 	<!-- PopAds.net Popunder Code for www.thcstream.net -->
 	<script type="text/javascript" data-cfasync="false">
@@ -50,8 +53,8 @@
 	<!-- PopAds.net Popunder Code End -->
 </head>
 <body>
-
-<header class="main" ng-if="!isCurrentState('player')">
+<div class="background_black"></div>
+<header class="main" id="main" ng-if="!isCurrentState('player')">
 		<div class="logo_ma">
 			<a class="logo" ui-sref="dash">
 				<asset:image src="logo.png"></asset:image>

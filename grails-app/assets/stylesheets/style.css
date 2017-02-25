@@ -553,23 +553,13 @@ body {
     background-image: url("/assets/bg_pc.png");
     background-repeat: no-repeat;
     background-position: top center;
+    background-attachment: fixed;
     background-color: #25292B;
     color: white;
     font-weight: 300;
     font-family: Arial;
 }
 
-@media (max-width: 500px) { 
-  body {
-    background-image: url("/assets/bg_mobile.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: #25292B;
-    color: white;
-    font-weight: 300;
-    font-family: Arial;
-  }
-}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -606,14 +596,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   max-width:1025px;
 }
+
 header.main {
-  background: rgb(32, 35, 37);
+  background: rgba(32, 35, 37, 0.96);
   padding: 5px 15px;
   position: fixed;
   width:100%;
   min-height: 49px;
   z-index:9999;
-  border-bottom:  1px solid rgb(45, 49, 50); }
+  }
   header.main:after {
     content: "";
     display: table;
