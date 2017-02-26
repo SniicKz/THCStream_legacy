@@ -14,19 +14,19 @@ class TheMovieDbService {
 
 
   def validateApiKey(apiKey){
-    def JsonContent = new URL(BASE_URL + '/configuration?api_key=' + apiKey).text
+    def JsonContent = new URL(BASE_URL + '/configuration?api_key=' + apiKey + "&language=de").text
     return new JsonSlurper().parseText(JsonContent)
   }
 
 
   def getSimilarMovies(movieId){
-    def JsonContent = new URL(BASE_URL + "/movie/$movieId/similar?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/movie/$movieId/similar?api_key=$API_KEY" + "&language=de").text
     return new JsonSlurper().parseText(JsonContent)
   }
 
 
   def getExternalLinks(showId){
-    def JsonContent = new URL(BASE_URL + "/tv/$showId/external_ids?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/tv/$showId/external_ids?api_key=$API_KEY" + "&language=de").text
     return new JsonSlurper().parseText(JsonContent)
   }
 
@@ -34,7 +34,7 @@ class TheMovieDbService {
     if(!API_KEY){
       return []
     }
-    def JsonContent = new URL(BASE_URL + "/genre/movie/list?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/genre/movie/list?api_key=$API_KEY" + "&language=de").text
     def genres =  new JsonSlurper().parseText(JsonContent).genres
 
     genres?.each{ genre ->
@@ -49,7 +49,7 @@ class TheMovieDbService {
     if(!API_KEY){
       return []
     }
-    def JsonContent = new URL(BASE_URL + "/genre/tv/list?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/genre/tv/list?api_key=$API_KEY" + "&language=de").text
     def genres =  new JsonSlurper().parseText(JsonContent).genres
 
     genres?.each{ genre ->
@@ -61,7 +61,7 @@ class TheMovieDbService {
   }
 
   def getTrailerForMovie(movieId){
-    def JsonContent = new URL(BASE_URL + "/movie/$movieId/videos?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/movie/$movieId/videos?api_key=$API_KEY" + "&language=de").text
     def videos =  new JsonSlurper().parseText(JsonContent).results
 
     def trailer = videos.findAll{it.type == "Trailer"}.max{it.size}
@@ -69,17 +69,17 @@ class TheMovieDbService {
   }
 
   def getFullMovieMeta(movieId){
-    def JsonContent = new URL(BASE_URL + "/movie/$movieId?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/movie/$movieId?api_key=$API_KEY" + "&language=de").text
     return new JsonSlurper().parseText(JsonContent)
   }
 
   def getFullTvShowMeta(tvId){
-    def JsonContent = new URL(BASE_URL + "/tv/$tvId?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/tv/$tvId?api_key=$API_KEY" + "&language=de").text
     return new JsonSlurper().parseText(JsonContent)
   }
 
   def getEpisodeMeta(tvApiId, seasonNumber, episodeNumber){
-    def JsonContent = new URL(BASE_URL + "/tv/$tvApiId/season/$seasonNumber/episode/$episodeNumber?api_key=$API_KEY").text
+    def JsonContent = new URL(BASE_URL + "/tv/$tvApiId/season/$seasonNumber/episode/$episodeNumber?api_key=$API_KEY" + "&language=de").text
     return new JsonSlurper().parseText(JsonContent)
   }
 }

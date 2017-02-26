@@ -47,7 +47,7 @@ class DefaultDataService {
         [
             settingsKey: 'Upload Directory',
             description: 'This setting provides the application with your desired upload-path for all files. ' +
-                'The default so far has been /data/THCStream. Remember: if you change this path, copy all the files (that were previously added) into the new directory.',
+                'The default so far has been /data/thc. Remember: if you change this path, copy all the files (that were previously added) into the new directory.',
             settingsType: 'string',
             required: true
         ],
