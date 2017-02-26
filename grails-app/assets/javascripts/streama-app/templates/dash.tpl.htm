@@ -18,9 +18,6 @@
   </div>-->
 
 
-
-<!-- https://image.tmdb.org/t/p/w1280/{{newRelease.media.backdrop_path}} -->
-
 <div class="dashboard">
   <div ng-if="newReleases.length && !selectedGenre">
     <h3>{{'DASHBOARD.NEW_RELEASES' | translate}}</h3>
@@ -82,7 +79,7 @@
             <h4><span ng-bind="::(viewingStatus.video.title || viewingStatus.video.show.name)"></span></h4>
             <!--<button class=" btn btn-secondary btn-xss complete-watching" ng-click="markCompleted(viewingStatus)">
               {{'DASHBOARD.MARK_COMPLETED' | translate}}</button>-->
-  <button class=" btn btn-secondary btn-xss complete-watching" ng-click="markCompleted(viewingStatus)">&#10004;</button>
+          <button class=" btn btn-secondary btn-xss complete-watching" ng-click="markCompleted(viewingStatus)">&#10004;</button>
 
             <p ng-show="viewingStatus.video.isEpisode"><span ng-bind="::viewingStatus.video.episodeString"></span></p>
           </div>
@@ -141,21 +138,12 @@
       {{'DASHBOARD.NO_TVSHOWS_FOUND' | translate}}
     </p>
 
-    <div class="media-list">
+   <div class="media-list">
       <div class="media-list-item media-poster-item" ng-repeat="tvShow in tvShows | orderBy:showSort.sort |filter: dashFilter.showFilter">
         <div class="media-item" >
-
-
-
-
           <img ng-if="tvShow.poster_path" ng-src="https://image.tmdb.org/t/p/w300/{{::tvShow.poster_path}}"/>
-
-
-
           <img ng-if="!tvShow.poster_path && !tvShow.manualInput" ng-src="{{basePath}}assets/poster-not-found.png"/>
-
           <img ng-show="tvShow.manualInput && tvShow.poster_image_src" ng-src="{{::tvShow.poster_image_src}}">
-
           <div class="play-text">
             <h4 ng-bind="::tvShow.name"></h4>
             <p><span ng-bind="::tvShow.firstEpisode.episodeString"></span> - <span ng-bind="::tvShow.firstEpisode.name"></span></p>
@@ -166,6 +154,8 @@
         </div>
       </div>
     </div>
+
+
 
     <hr/>
   </div>
@@ -225,7 +215,10 @@
       {{'DASHBOARD.NO_MOVIES_FOUND' | translate}}
     </p>
 
-    <!--<div class="media-list">
+
+
+
+    <!--<div class="media-list" id="m_obile_list">
       <div class="media-list-item media-poster-item" ng-repeat="movie in movies | orderBy:movieSort.sort |filter: dashFilter.movieFilter">
         <div class="media-item" >
 
@@ -246,27 +239,46 @@
     </div>-->
 
 
-    <div class="media-list">
+    <div class="media-list" id="pc_list">
       <div class="media-list-item media-poster-item-wide" ng-repeat="movie in movies | orderBy:movieSort.sort |filter: dashFilter.movieFilter">
         <div class="media-item" >
 
+
           <img ng-if="!movie.poster_path && !movie.poster_image_src" ng-src="{{basePath}}assets/poster-not-found.png"/>
 
-          <!--<img ng-if="movie.poster_path" ng-src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>-->
           <img ng-if="movie.backdrop_path" ng-src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}"/>
 
           <img ng-if="movie.poster_image_src" ng-src="{{movie.poster_image_src}}"/>
-
           <div class="play-text">
-            <h4 ng-bind="::movie.title"></h4>
-            <p ng-bind="::movie.release_date.substring(0,4)"></p>
+            <!--<h4 ng-bind="::movie.title"></h4>
+            <p ng-bind="::movie.release_date.substring(0,4)"></p>-->
           </div>
 
           <i class="info-icon ion-ios-information" ng-click="showDetails(movie)"></i>
           <a class="play-icon ion-ios-play" style="line-height: 5em;" ui-sref="player({videoId: movie.id})"></a>
         </div>  
+
+
+        <div class="media-progress-wrapper">
+          
+          <div class="progress-info">
+            <div ng-bind="::movie.title" style="margin-bottom:2px;"></div>
+            <div ng-bind="::movie.release_date.substring(0,4)"></div>
+          </div>
+
+
+        </div>
+
       </div>
     </div>
+
+
+
+
+
+
+
+
 
   </div>
 
