@@ -218,7 +218,7 @@
 
 
 
-    <!--<div class="media-list" id="m_obile_list">
+    <div class="media-list" id="m_obile_list">
       <div class="media-list-item media-poster-item" ng-repeat="movie in movies | orderBy:movieSort.sort |filter: dashFilter.movieFilter">
         <div class="media-item" >
 
@@ -236,10 +236,10 @@
           <a class="play-icon ion-ios-play" ui-sref="player({videoId: movie.id})"></a>
         </div>  
       </div>
-    </div>-->
+    </div>
 
 
-    <div class="media-list" id="pc_list">
+    <!--<div class="media-list" id="pc_list">
       <div class="media-list-item media-poster-item-wide" ng-repeat="movie in movies | orderBy:movieSort.sort |filter: dashFilter.movieFilter">
         <div class="media-item" >
 
@@ -250,8 +250,8 @@
 
           <img ng-if="movie.poster_image_src" ng-src="{{movie.poster_image_src}}"/>
           <div class="play-text">
-            <!--<h4 ng-bind="::movie.title"></h4>
-            <p ng-bind="::movie.release_date.substring(0,4)"></p>-->
+            <h4 ng-bind="::movie.title"></h4>
+            <p ng-bind="::movie.release_date.substring(0,4)"></p>
           </div>
 
           <i class="info-icon ion-ios-information" ng-click="showDetails(movie)"></i>
@@ -270,7 +270,7 @@
         </div>
 
       </div>
-    </div>
+    </div>-->
 
 
 
